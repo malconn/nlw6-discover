@@ -4,9 +4,7 @@
   "description": "Trilha NLW - Discover",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon .",
-    "watch": "npx gulp watch",
-    "build": "npx gulp",
+    "start": "concurrently \"npx gulp\" \"nodemon .\" \"npx gulp watch\" ",
     "init-db": "node src/db/init.js"
   },
   "repository": {
@@ -21,6 +19,7 @@
   },
   "homepage": "https://github.com/malconn/nlw6-discover#readme",
   "dependencies": {
+    "concurrently": "^6.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "gulp": "^4.0.2",

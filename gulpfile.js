@@ -11,14 +11,14 @@ function css(){
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('rocket-q.min.css'))
     .pipe(cssmin())
-    .pipe(dest(`./public/`))
+    .pipe(dest(`./public/styles/`))
 }
 
 function js() {
-    return src('public/scripts/**/*.js')
+    return src('src/js/**/*.js')
         .pipe(
             rollup({
-                input: 'public/scripts/main.js',
+                input: './src/js/index.js',
                 allowRealFiles: true,
                 plugins: [
                     babel(),
@@ -31,15 +31,16 @@ function js() {
         )
         .pipe(babel())
         .pipe(jsmin())
-        .pipe(dest(`./public/`));
+        .pipe(concat('main.js'))
+        .pipe(dest(`./public/js/`));
 }
 
 exports.css = css;
 exports.js = js;
 
 exports.watch = (cb) => {
-    watch('src/scss/**/*.scss', css, ['sass']);
-    watch('public/scripts/**/*.js', js);
+    watch('src/scss/**/*.scss', css);
+    watch('src/js/**/*.js', js);
     cb();
 };
 
