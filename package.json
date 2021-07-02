@@ -5,6 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "start": "nodemon .",
+    "watch": "npx gulp watch",
+    "build": "npx gulp",
     "init-db": "node src/db/init.js"
   },
   "repository": {
@@ -21,10 +23,21 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "gulp": "^4.0.2",
     "sqlite": "^4.0.23",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rollup": "^2.17.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.7",
+    "sass": "^1.35.1"
   }
 }
