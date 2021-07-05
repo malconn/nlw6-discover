@@ -1,0 +1,30 @@
+@mixin type-1($size){
+    font: {
+        family: 'Open Sans', sans-serif;
+        weight: 400;
+    }
+    @if $size== 14{
+        font-size: clamp(10px, 2vw, 1.4rem);
+    }
+}
+@mixin type-2($size){
+    font: {
+        family:'Poppins', sans-serif;
+    }
+    @if $size==28{
+        font-size: clamp(20px, 5vw, 2.8rem);
+        font-weight: 700;
+    }
+    @else if $size==18{
+        font-size: clamp(15px, 3vw, 1.8rem);
+        font-weight: 600;
+    }
+    @else if $size==16{
+        font-size: clamp(15px, 3vw, 1.6rem);
+        font-weight: 500;
+    }
+    @else if $size==14{
+        font-size: clamp(10px, 2vw, 1.4rem);
+        font-weight: 400;
+    }
+}
