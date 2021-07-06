@@ -38,14 +38,12 @@
 /*** QUESTION FORM ***/
 #question-form h2 {
   @include type-2(28);
-  color: $black;
   line-height: 4.2rem;
 
   margin-bottom: 2.4rem;
 }
 
 #question-form form {
-  border: 0.2rem solid $grey-blue;
   padding: 1.6rem;
   border-radius: 0 0.8rem 0.8rem 0.8rem;
 
@@ -61,9 +59,6 @@
   outline: none;
 }
 
-#question-form form textarea::placeholder {
-  color: $grey-blue;
-}
 
 #question-form form footer {
   display: flex;
@@ -75,7 +70,6 @@
   display: flex;
   align-items: center;
 
-  color: $icons-details;
   @include type-2(14);
 }
 
@@ -91,7 +85,6 @@
 
 /******* Questions *****/
 .question-wrapper {
-  background: $light-blue;
   margin-bottom: 0.8rem;
   border-radius: 0 0.8rem 0.8rem 0.8rem;
   padding: 2.4rem;
@@ -103,7 +96,6 @@
 }
 
 .question-wrapper .question-content .user {
-  background: $blue;
   clip-path: circle();
   padding: 1.4rem;
 }
@@ -136,13 +128,6 @@
 }
 
 /***** Question Read ****/
-.question-wrapper.read {
-  background: $grey-medium;
-}
-
-.question-wrapper.read .question-content .user {
-  background: $grey-blue;
-}
 
 /*** No Questions   **/
 .no-questions {

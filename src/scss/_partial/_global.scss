@@ -16,7 +16,7 @@ html{
 body{
     display: flex;
     height: 100vh;
-    background: $background;
+    background: $background-tl;
 }
 
 body, button, input, textarea{
@@ -57,8 +57,8 @@ button, .button{
     align-items: center;
     justify-content: center;
 
-    background: $blue;
-    color: $white;
+    background: $blue-tl;
+    color: $white-tl;
 
     transition: filter .2s;
 
@@ -77,21 +77,21 @@ button > img,
 
 button.outlined,
 .button.outlined{
-    background: $white;
-    color: $blue;
-    border: .2rem solid $blue;
+    background: $white-tl;
+    color: $blue-tl;
+    border: .2rem solid $blue-tl;
 }
 
 button.red,
 .button.red{
-    background: $red;
-    color: $white;
+    background: $red-tl;
+    color: $white-tl;
 }
 
 button.grey,
 .button.grey{
-    background: $grey-light;
-    color: $grey-dark;
+    background: $grey-light-tl;
+    color: $grey-dark-tl;
 }
 
 /*** HEADER ****/
