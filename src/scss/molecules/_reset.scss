@@ -1,5 +1,4 @@
-@import './colors';
-@import './typography';
+@import "./colors";
 *{
     margin: 0;
     padding: 0;
@@ -104,5 +103,3 @@ button.grey,
 .content header img{
     width: 16.7rem;
 }
-// queries
-@import './query';

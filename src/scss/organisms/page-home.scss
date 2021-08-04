@@ -1,4 +1,4 @@
-@import './global';
+
 .content{
     display: grid;
     grid-template-columns: 60% 40%;
@@ -33,7 +33,7 @@ main .container{
 }
 
 main h2{
-    @include type-2(28);
+    // @include type-2(28);
     margin-bottom: 2.4rem;
 }
 
@@ -56,7 +56,7 @@ input, button, .button{
 }
 
 .separator div:nth-child(2){
-    @include type-2(14);
+    // @include type-2(14);
     padding: 0 1.35rem;
     line-height: 0;
 }
@@ -89,23 +89,23 @@ input, button, .button{
     right: 5.6rem
 }
 // queries 
-@include dispositivo(tablet){
-    .content{
-        grid-template-areas: 
-        'header header'
-        'main main';
-    }
-    #bg {
-        grid-area: main;
-        background-position-x: 0;
-        display: flex;
-    }
-    main {
-        grid-area: main;
-        width: 80%;
-        margin: 20rem auto;
-        height: 100vh;
-        align-content: center;
-        display: flex;
-    }
-}
+// @include dispositivo(tablet){
+//     .content{
+//         grid-template-areas: 
+//         'header header'
+//         'main main';
+//     }
+//     #bg {
+//         grid-area: main;
+//         background-position-x: 0;
+//         display: flex;
+//     }
+//     main {
+//         grid-area: main;
+//         width: 80%;
+//         margin: 20rem auto;
+//         height: 100vh;
+//         align-content: center;
+//         display: flex;
+//     }
+// }

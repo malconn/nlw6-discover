@@ -1,6 +1,8 @@
+@import '../variables/all';
+
 @mixin type-1($size){
     font: {
-        family: 'Open Sans', sans-serif;
+        family: $font-opensans;
         weight: 400;
     }
     @if $size== 14{
@@ -9,7 +11,7 @@
 }
 @mixin type-2($size){
     font: {
-        family:'Poppins', sans-serif;
+        family: $font-poppins;
     }
     @if $size==28{
         font-size: clamp(20px, 5vw, 2.8rem);

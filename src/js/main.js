@@ -1,6 +1,7 @@
 import Modal from './modal.js'
-
+import './thema-toggle'
 const modal = Modal()
+
 
 const modalTitle = document.querySelector('.modal h2')
 const modalDescription = document.querySelector('.modal p')
