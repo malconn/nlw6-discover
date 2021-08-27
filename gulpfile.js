@@ -6,19 +6,13 @@ const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const rollup = require('gulp-rollup');
 
+
 function css(){
-    return src('src/scss/organisms/page-home.scss')
+    return src('src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(concat('home_rocket-q.min.css'))
+    .pipe(concat('style.min.css'))
     .pipe(cssmin())
-    .pipe(dest(`./public/styles/`))
-}
-function css2(){
-    return src('src/scss/organisms/page-room.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(concat('room_rocket-q.min.css'))
-    .pipe(cssmin())
-    .pipe(dest(`./public/styles/`))
+    .pipe(dest(`./public/style/`))
 }
 
 function js() {
@@ -43,14 +37,12 @@ function js() {
 }
 
 exports.css = css;
-exports.css2 = css;
 exports.js = js;
 
 exports.watch = (cb) => {
-    watch('src/scss/organisms/page-home.scss', css);
-    watch('src/scss/organisms/page-room.scss', css2);
     watch('src/js/**/*.js', js);
+    watch('src/scss/**/*.scss', css);
     cb();
 };
 
-exports.default = parallel(css, js, css2);
+exports.default = parallel(js,css);

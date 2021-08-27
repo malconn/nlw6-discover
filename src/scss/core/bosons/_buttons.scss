@@ -1,0 +1,13 @@
+@import "../variables/all";
+@import "../mixins/query";
+@import '../mixins/themas';
+
+#home input{
+    padding: 0 1.6rem;
+    outline: none;
+}
+
+#home input, #home button, #home .button{
+    width: 100%;
+    margin-bottom: 1.8rem;
+}

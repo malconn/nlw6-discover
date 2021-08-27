@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/styles/room_rocket-q.min.css">
+    <link rel="stylesheet" href="/style/style.min.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -41,7 +41,7 @@
         <main>
             <section id="question-form">
                 <h2>Faça sua pergunta</h2>
-                <a href="#" id="toggleButton">Toggle</a>
+                
                 <form action="/question/create/<%= roomId%>" method="POST">
                     <label for-id="question" class="sr-only">O que você quer perguntar?</label>
                     <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>

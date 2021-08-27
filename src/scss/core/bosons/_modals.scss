@@ -1,3 +1,8 @@
+@import "../variables/all";
+@import "../mixins/query";
+@import '../mixins/themas';
+@import "../mixins/typography";
+
 
 .modal-wrapper.active{
     visibility: visible;

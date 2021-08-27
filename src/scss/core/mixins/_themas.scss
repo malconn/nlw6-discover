@@ -1,0 +1,60 @@
+@import "../variables/colors";
+
+$colors-dark: "black" $black-td, "grey-blue" $grey-blue-td, "blue" $blue-td,
+  "icons" $icons-details-td, "light-blue" $light-blue-td,
+  "grey-medium" $grey-medium-td, "white" $white-td, "grey-dark" $grey-dark-td,
+  "linear-dark" $linear-gradient-blackred;
+
+@each $name, $color in $colors-dark {
+  body.#{$name} {
+    background: $color;
+  }
+  main h2.#{$name},
+  #question-form h2,
+  .modal-wrapper .modal h2 {
+    color: $color;
+  }
+  button.#{$name} {
+    background-color: $color;
+  }
+  h2.#{$name} {
+    color: $color;
+  }
+  input.#{$name},
+  #question-form form.#{$name},
+  .separator div :nth-child(2).#{$name},
+  .separator div:nth-child(1).#{$name},
+  .separator div:nth-child(3).#{$name} {
+    border: 0.2rem solid $color;
+  }
+  #question-form form textarea::placeholder .#{$name} {
+    color: $color;
+  }
+  .question-wrapper.read .question-content .user.#{$name} {
+    background: $color;
+  }
+  .ball.#{$name},
+  .ball.top .question-wrapper .question-content .user.#{$name} {
+    background: $color;
+  }
+  .ball {
+    & .top.#{$name} {
+      background-color: $color;
+    }
+  }
+  .modal-wrapper .modal input.#{$name} {
+    border: 0.2rem solid $color;
+  }
+  #question-form form footer > div.#{$name} {
+    background: $color;
+  }
+  .question-wrapper.read.#{$name} {
+    background: $color;
+  }
+  .modal-wrapper .modal.#{$name} {
+    background: $color;
+  }
+  .modal-wrapper .modal p.#{$name} {
+    color: $color;
+  }
+}

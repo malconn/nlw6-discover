@@ -1,0 +1,27 @@
+@import "../core/mixins/query";
+
+@include dispositivo(tablet) {
+  #room header {
+    display: block;
+  }
+  .content {
+    grid-template-areas:
+      "header header"
+      "main main";
+  }
+  #bg {
+    grid-area: main;
+    background-position-x: 0;
+    display: flex;
+  }
+  main {
+    grid-area: main;
+    width: 80%;
+    margin: 20rem auto;
+    height: 100vh;
+    align-content: center;
+    display: flex;
+  }
+}
+@include dispositivo(mobile) {
+}
