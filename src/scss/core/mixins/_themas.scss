@@ -3,7 +3,7 @@
 $colors-dark: "black" $black-td, "grey-blue" $grey-blue-td, "blue" $blue-td,
   "icons" $icons-details-td, "light-blue" $light-blue-td,
   "grey-medium" $grey-medium-td, "white" $white-td, "grey-dark" $grey-dark-td,
-  "linear-dark" $linear-gradient-blackred;
+  "bg-dark" $blackred, "gradient-btn" $gradient-btn;
 
 @each $name, $color in $colors-dark {
   body.#{$name} {
@@ -55,6 +55,19 @@ $colors-dark: "black" $black-td, "grey-blue" $grey-blue-td, "blue" $blue-td,
     background: $color;
   }
   .modal-wrapper .modal p.#{$name} {
+    color: $color;
+  }
+  .button.outlined.#{$name},
+  button.outlined.#{$name}{
+    background:$color;
+    color: $white-td;
+    box-shadow: 3px 3px 10px 0px #1a05339c;
+    border: none;
+  }
+  .separator div:nth-child(1), .separator div:nth-child(3).#{$name}{
+    background-color: $color;
+  }
+  .separator div:nth-child(2).#{$name}{
     color: $color;
   }
 }
